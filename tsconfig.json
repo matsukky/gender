@@ -1,6 +1,6 @@
 {
     "compilerOptions": {
-      "types": ["node"],
+      "types": ["@types/node"],
       "moduleResolution": "node",
       "module": "commonjs",
       "target": "ESNext", 

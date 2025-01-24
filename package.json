@@ -12,7 +12,7 @@
     "fonts"
   ],
   "scripts": {
-    "test": "jest --coverage",
+    "test": "jest",
     "build": "tsc"
   },
   "types": "index.d.ts",

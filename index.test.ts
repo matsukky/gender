@@ -32,7 +32,7 @@ describe('Gender Module', () => {
     it('should return correct gender data', () => {
       const result = gender('MALE', { 
         capitalize: false, 
-        args: [], 
+        custom: [], 
         language: 'en' 
       })
       expect(result).toBeTruthy()
@@ -43,7 +43,7 @@ describe('Gender Module', () => {
     it('should capitalize gender data when requested', () => {
       const result = gender('FEMALE', {
         capitalize: true,
-        args: [],
+        custom: [],
         language: 'en'
       })
       expect(result.indirectPronoun[0]).toEqual(result.indirectPronoun[0].toUpperCase())
@@ -53,17 +53,17 @@ describe('Gender Module', () => {
     it('should handle non-existent language', () => {
       const result = gender('MALE', {
         capitalize: false,
-        args: [],
+        custom: [],
         language: 'invalid' as any
       })
       expect(result).toBeTruthy()
       expect(result).toHaveProperty('indirectPronoun')
     })
 
-    it('should handle args properly', () => {
+    it('should handle custom properly', () => {
       const result = gender('NEUTRAL', {
         capitalize: false,
-        args: ['test'],
+        custom: ['test'],
         language: 'en'
       })
       expect(result).toBeTruthy()
