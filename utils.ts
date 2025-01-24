@@ -1,7 +1,7 @@
 export const roles = {
-  F: [ "F", "♀", "WOMAN", "GIRL" ],
-  M: [ "M","H", "♂", "MAN", "MEN", "BOY" ],
-  X: [ "X","N", "⚧", "NEUTRAL" ],
+  F: [ "F", "♀", "WOMAN", "GIRL", "FEMALE" ],
+  M: [ "M","H", "♂", "MAN", "MEN", "BOY", "MALE" ],
+  X: [ "X","N", "⚧", "NEUTRAL", "HUMAN" ],
 }
 
 export const general = {

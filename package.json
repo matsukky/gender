@@ -12,10 +12,9 @@
     "fonts"
   ],
   "scripts": {
-    "test": "jest",
+    "test": "jest --coverage",
     "build": "tsc"
   },
-
   "types": "index.d.ts",
   "devDependencies": {
     "@types/jest": "^29.5.14",

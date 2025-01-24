@@ -1,4 +1,3 @@
-
 {
     "compilerOptions": {
       "types": ["node"],
@@ -12,6 +11,6 @@
       "allowJs": true
     },
     "exclude": [
-      "tests"
+      "./index.test.ts",
     ]
   }

@@ -22,6 +22,6 @@ export interface GenderData {
   pluralPossessiveAdjective: string
 }
 
-export type AvalaibleGender = 'F' | '♀' | 'WOMAN' | 'GIRL' | 'M' | 'H' | '♂' | 'MAN' | 'MEN' | 'BOY' | 'X' | 'N' | '⚧' | 'NEUTRAL';
+export type AvalaibleGender = 'F' | '♀' | 'WOMAN' | 'FEMALE' | 'GIRL' | 'M' | 'H' | '♂' | 'MAN' | "MALE" | 'MEN' | 'BOY' | 'X' | 'N' | '⚧' | 'NEUTRAL' | 'HUMAN';
 
 export type AvalaibleLanguage = 'en' | 'fr' | 'de' | 'es' | 'it' | 'jp' | 'zh' | 'ar' | 'ru'
