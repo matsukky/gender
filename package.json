@@ -1,6 +1,6 @@
 {
   "name": "@matsukky/gender",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": "Maylody",
   "repository": {
     "type": "git",
@@ -9,7 +9,17 @@
   "main": "index.js",
   "description": "Easy list of gender terms in several languages.",
   "keywords": [
-    "fonts"
+    "gender", 
+    "lgbtq",
+    "identity",
+    "gender-api",
+    "data-processing",
+    "gender-utilities",
+    "gender-binary",
+    "non-binary",
+    "inclusive-design",
+    "human-data",
+    "social-data"
   ],
   "scripts": {
     "test": "jest",
