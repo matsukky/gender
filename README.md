@@ -1,6 +1,6 @@
 <div align="center">
     <h1 style="border-bottom: none">
-        <img src="./gender.svg" width="150" height="150">
+        <img src="https://raw.githubusercontent.com/matsukky/gender/d1b713526398f4d53416bbd6b0d9a13317b00991/gender.svg" width="150" height="150">
         <b>
             <h1>Gender</h1>
         </b>
