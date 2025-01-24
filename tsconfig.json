@@ -1,0 +1,17 @@
+
+{
+    "compilerOptions": {
+      "types": ["node"],
+      "moduleResolution": "node",
+      "module": "commonjs",
+      "target": "ESNext", 
+      "esModuleInterop": true,
+      "resolveJsonModule": true,
+      "outDir": "./dist",
+      "declaration": true,
+      "allowJs": true
+    },
+    "exclude": [
+      "tests"
+    ]
+  }
