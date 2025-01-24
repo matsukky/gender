@@ -1,10 +1,10 @@
 {
   "name": "@matsukky/gender",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "author": "Maylody",
   "repository": {
     "type": "git",
-    "url": "https://git.matsukky.com/matsukky/gender.git"
+    "url": "https://github.com/matsukky/gender.git"
   },
   "main": "index.js",
   "description": "Easy list of gender terms in several languages.",
