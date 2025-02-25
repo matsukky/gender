@@ -12,5 +12,6 @@
     },
     "exclude": [
       "./index.test.ts",
+      "./jest.config.js"
     ]
   }
