@@ -1,6 +1,6 @@
 {
   "name": "@matsukky/gender",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "author": "Maylody",
   "repository": {
     "type": "git",
@@ -9,7 +9,7 @@
   "main": "index.js",
   "description": "Easy list of gender terms in several languages.",
   "keywords": [
-    "gender", 
+    "gender",
     "lgbtq",
     "identity",
     "gender-api",
@@ -23,11 +23,13 @@
   ],
   "scripts": {
     "test": "jest",
-    "build": "tsc"
+    "build": "tsc",
+    "size": "bundlesize"
   },
   "types": "index.d.ts",
   "devDependencies": {
     "@types/jest": "^29.5.14",
+    "bundlesize": "^0.18.2",
     "jest": "^29.7.0",
     "ts-jest": "^29.2.5",
     "ts-node": "^10.9.2",
