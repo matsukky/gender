@@ -1,4 +1,4 @@
-name: Node.js CI
+name: Test & NPM Publish CI
 
 on:
   push:
@@ -10,22 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: 22
-      - run: npm ci
-      - run: npm test
+          bun-version: latest
+      - run: bun install
+      - run: bun test
 
   build:
-    #needs: test
+    needs: test
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: 22
-      - run: npm ci
-      - run: npm run build
+          bun-version: latest
+      - run: bun install
+      - run: bun run build
       - run: cp package.json dist/
       - run: cp README.md dist/
       - name: Upload build artifacts
@@ -40,15 +40,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: oven-sh/setup-bun@v1
         with:
-          node-version: 22
+          bun-version: latest
           registry-url: https://registry.npmjs.org/
       - name: Download build artifacts
         uses: actions/download-artifact@v4
         with:
           name: build-artifacts
           path: ./dist
-      - run: cd dist && npm publish --access public
+      - run: cd dist && bun publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
