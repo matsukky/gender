@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "واحدة",
         genderAdjective: "أنثوي",
         pluralSubjectPronoun: "هن",
-        pluralPossessiveAdjective: "هن"
+        pluralPossessiveAdjective: "هن",
+        title: "سيدة",
+        shortTitle: "س"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "واحد",
         genderAdjective: "ذكري",
         pluralSubjectPronoun: "هم",
-        pluralPossessiveAdjective: "هم"
+        pluralPossessiveAdjective: "هم",
+        title: "سيد",
+        shortTitle: "س"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "واحد/واحدة",
         genderAdjective: "محايد",
         pluralSubjectPronoun: "هم/هن",
-        pluralPossessiveAdjective: "هم/هن"
+        pluralPossessiveAdjective: "هم/هن",
+        title: "مكس",
+        shortTitle: "مك"
     }
 } as GenderCollection

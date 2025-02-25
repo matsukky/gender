@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "una",
         genderAdjective: "femminile",
         pluralSubjectPronoun: "loro",
-        pluralPossessiveAdjective: "loro"
+        pluralPossessiveAdjective: "loro",
+        title: "Signora",
+        shortTitle: "Sig.ra"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "un",
         genderAdjective: "maschile",
         pluralSubjectPronoun: "loro",
-        pluralPossessiveAdjective: "loro"
+        pluralPossessiveAdjective: "loro",
+        title: "Signore",
+        shortTitle: "Sig"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "un/una",
         genderAdjective: "neutro",
         pluralSubjectPronoun: "loro",
-        pluralPossessiveAdjective: "loro"
+        pluralPossessiveAdjective: "loro",
+        title: "Mix",
+        shortTitle: "Mx"
     }
 } as GenderCollection

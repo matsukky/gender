@@ -20,6 +20,8 @@ export interface GenderData {
   genderAdjective: string
   pluralSubjectPronoun: string
   pluralPossessiveAdjective: string
+  title: string
+  shortTitle: string
 }
 
 export type AvalaibleGender = 'F' | '♀' | 'WOMAN' | 'FEMALE' | 'GIRL' | 'M' | 'H' | '♂' | 'MAN' | "MALE" | 'MEN' | 'BOY' | 'X' | 'N' | '⚧' | 'NEUTRAL' | 'HUMAN';

@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "une",
         genderAdjective: "féminine",
         pluralSubjectPronoun: "elles",
-        pluralPossessiveAdjective: "leurs"
+        pluralPossessiveAdjective: "leurs",
+        title: "Madame",
+        shortTitle: "Mme"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "un",
         genderAdjective: "masculine",
         pluralSubjectPronoun: "ils",
-        pluralPossessiveAdjective: "leurs"
+        pluralPossessiveAdjective: "leurs",
+        title: "Monsieur",
+        shortTitle: "M."
     },
     X: {
         ...general.X,
@@ -48,6 +52,9 @@ export default {
         indeterminateArticle: "un·e",
         genderAdjective: "neutre",
         pluralSubjectPronoun: "iels",
-        pluralPossessiveAdjective: "leurs"
+        pluralPossessiveAdjective: "leurs",
+        title: "Mx",
+        shortTitle: "Mx"
+        
     }
 } as GenderCollection

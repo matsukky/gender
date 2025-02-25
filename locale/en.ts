@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "a",
         genderAdjective: "feminine",
         pluralSubjectPronoun: "they",
-        pluralPossessiveAdjective: "their"
+        pluralPossessiveAdjective: "their",
+        title: "Miss/Mrs",
+        shortTitle: "Ms"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "a",
         genderAdjective: "masculine",
         pluralSubjectPronoun: "they",
-        pluralPossessiveAdjective: "their"
+        pluralPossessiveAdjective: "their",
+        title: "Mister",
+        shortTitle: "Mr"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "a",
         genderAdjective: "neutral",
         pluralSubjectPronoun: "they",
-        pluralPossessiveAdjective: "their"
+        pluralPossessiveAdjective: "their",
+        title: "Mix",
+        shortTitle: "Mx"
     }
 } as GenderCollection

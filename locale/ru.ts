@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "одна",
         genderAdjective: "женский",
         pluralSubjectPronoun: "они",
-        pluralPossessiveAdjective: "их"
+        pluralPossessiveAdjective: "их",
+        title: "Госпожа",
+        shortTitle: "Г-жа"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "один",
         genderAdjective: "мужской",
         pluralSubjectPronoun: "они",
-        pluralPossessiveAdjective: "их"
+        pluralPossessiveAdjective: "их",
+        title: "Господин",
+        shortTitle: "Г-н"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "одно",
         genderAdjective: "нейтральный",
         pluralSubjectPronoun: "они",
-        pluralPossessiveAdjective: "их"
+        pluralPossessiveAdjective: "их",
+        title: "Микс",
+        shortTitle: "Мкс"
     }
 } as GenderCollection

@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "eine",
         genderAdjective: "weiblich",
         pluralSubjectPronoun: "sie",
-        pluralPossessiveAdjective: "ihre"
+        pluralPossessiveAdjective: "ihre",
+        title: "Frau",
+        shortTitle: "Fr"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "ein",
         genderAdjective: "männlich",
         pluralSubjectPronoun: "sie",
-        pluralPossessiveAdjective: "ihre"
+        pluralPossessiveAdjective: "ihre",
+        title: "Herr",
+        shortTitle: "Hr"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "ein",
         genderAdjective: "neutral",
         pluralSubjectPronoun: "sie",
-        pluralPossessiveAdjective: "ihre"
+        pluralPossessiveAdjective: "ihre",
+        title: "Mix",
+        shortTitle: "Mx"
     }
 } as GenderCollection

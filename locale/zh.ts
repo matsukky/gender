@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "一个",
         genderAdjective: "女性的",
         pluralSubjectPronoun: "她们",
-        pluralPossessiveAdjective: "她们的"
+        pluralPossessiveAdjective: "她们的",
+        title: "女士",
+        shortTitle: "女"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "一个",
         genderAdjective: "男性的",
         pluralSubjectPronoun: "他们",
-        pluralPossessiveAdjective: "他们的"
+        pluralPossessiveAdjective: "他们的",
+        title: "先生",
+        shortTitle: "男"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "一个",
         genderAdjective: "中性的",
         pluralSubjectPronoun: "他们",
-        pluralPossessiveAdjective: "他们的"
+        pluralPossessiveAdjective: "他们的",
+        title: "同志",
+        shortTitle: "X"
     }
 } as GenderCollection

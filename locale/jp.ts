@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "ある",
         genderAdjective: "女性の",
         pluralSubjectPronoun: "彼女たち",
-        pluralPossessiveAdjective: "彼女たちの"
+        pluralPossessiveAdjective: "彼女たちの",
+        title: "さん",
+        shortTitle: "さん"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "ある",
         genderAdjective: "男性の",
         pluralSubjectPronoun: "彼ら",
-        pluralPossessiveAdjective: "彼らの"
+        pluralPossessiveAdjective: "彼らの",
+        title: "さん",
+        shortTitle: "さん"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "ある",
         genderAdjective: "中性の",
         pluralSubjectPronoun: "それらの人々",
-        pluralPossessiveAdjective: "それらの人々の"
+        pluralPossessiveAdjective: "それらの人々の",
+        title: "さん",
+        shortTitle: "さん"
     }
 } as GenderCollection

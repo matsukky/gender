@@ -16,7 +16,9 @@ export default {
         indeterminateArticle: "una",
         genderAdjective: "femenina",
         pluralSubjectPronoun: "ellas",
-        pluralPossessiveAdjective: "sus"
+        pluralPossessiveAdjective: "sus",
+        title: "Señora",
+        shortTitle: "Sra"
     },
     M: {
         ...general.M,
@@ -32,7 +34,9 @@ export default {
         indeterminateArticle: "un",
         genderAdjective: "masculina",
         pluralSubjectPronoun: "ellos",
-        pluralPossessiveAdjective: "sus"
+        pluralPossessiveAdjective: "sus",
+        title: "Señor",
+        shortTitle: "Sr"
     },
     X: {
         ...general.X,
@@ -48,6 +52,8 @@ export default {
         indeterminateArticle: "une",
         genderAdjective: "neutro",
         pluralSubjectPronoun: "elles",
-        pluralPossessiveAdjective: "sus"
+        pluralPossessiveAdjective: "sus",
+        title: "Mix",
+        shortTitle: "Mx"
     }
 } as GenderCollection
