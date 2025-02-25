@@ -28,7 +28,7 @@ export async function locale(language: AvalaibleLanguage = 'fr', define = true):
   }
 }
 
-export function gender(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: Record<'F' | 'M' | 'X', string>; language?: AvalaibleLanguage } = {}): GenderData {
+export function gender(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: Record<string, Record<'F' | 'M' | 'X', string>>; language?: AvalaibleLanguage } = {}): GenderData {
   const { capitalize = false, custom = {} } = options;
   let { language = L } = options;
   gender = getGenderRole(gender)
@@ -36,11 +36,13 @@ export function gender(gender: AvalaibleGender, options: { capitalize?: boolean;
     console.warn(`[GENDER] The language "${language}" has not been loaded.`)
     language = L
   }
-  const result = { ...Ls[language][gender] } as GenderData & { custom?: string }
+  const result = { ...Ls[language][gender] } as GenderData & { [key: string]: any }
 
-  if (Object.keys(custom).length !== 0) {
-    result.custom = custom[gender] || ""
-  }
+  Object.keys(custom).forEach(key => {
+    if (custom[key] && custom[key][gender]) {
+      result[key] = custom[key][gender];
+    }
+  });
 
   if (capitalize) {
     Object.keys(result).forEach(key => {
