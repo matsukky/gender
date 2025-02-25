@@ -49,6 +49,6 @@ jobs:
         with:
           name: build-artifacts
           path: ./dist
-      - run: bunx npm login && cd dist && bun publish --provenance --access public
+      - run: npm publish --provenance --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
