@@ -6,6 +6,8 @@ export let L = <AvalaibleLanguage> 'en'
 export const Ls = <{ [key: string]: GenderCollection }> {}
 Ls[L] = en
 
+export * as Types from './types'
+
 function toCapitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
 }
@@ -26,17 +28,18 @@ export async function locale(language: AvalaibleLanguage = 'fr', define = true):
   }
 }
 
-
-export function gender(gender: AvalaibleGender, { capitalize, custom, language = L }: { capitalize: boolean; custom: string[]; language: AvalaibleLanguage }): GenderData {
+export function gender(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: Record<'F' | 'M' | 'X', string>; language?: AvalaibleLanguage } = {}): GenderData {
+  const { capitalize = false, custom = {} } = options;
+  let { language = L } = options;
   gender = getGenderRole(gender)
   if (!Ls[language]) {
-    console.warn(`[GENDER] The language "${language}" as not been loaded.`)
+    console.warn(`[GENDER] The language "${language}" has not been loaded.`)
     language = L
   }
   const result = { ...Ls[language][gender] } as GenderData & { custom?: string }
 
-  if (custom && Array.isArray(custom)) {
-    result.custom = custom[gender === "F" ? 0 : gender === "X" ? 1 : 2] || ""
+  if (Object.keys(custom).length !== 0) {
+    result.custom = custom[gender] || ""
   }
 
   if (capitalize) {
