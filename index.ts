@@ -28,8 +28,8 @@ export async function locale(language: AvalaibleLanguage = 'fr', define = true):
   }
 }
 
-export function gender(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: Record<string, Record<'F' | 'M' | 'X', string>>; language?: AvalaibleLanguage } = {}): GenderData {
-  const { capitalize = false, custom = {} } = options;
+export function gender<T extends Record<string, Record<'F' | 'M' | 'X', string>>>(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: T; language?: AvalaibleLanguage } = {}): GenderData & { [K in keyof T]?: string } {
+  const { capitalize = false, custom = {} as T } = options;
   let { language = L } = options;
   gender = getGenderRole(gender)
   if (!Ls[language]) {
