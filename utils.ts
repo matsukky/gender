@@ -7,15 +7,15 @@ export const roles = {
 export const general = {
   F: {
     emoji: "🚺",
-    colors: ["#e995cb"],
+    colors: ["#e995cb", "#ff69b4", "#ff1493", "#db7093", "#c71585"],
   },
   M: {
     emoji: "🚹",
-    colors: ["#84d6fa"],
+    colors: ["#84d6fa", "#1e90ff", "#00bfff", "#4682b4", "#5f9ea0"],
   },
   X: {
     emoji: "🚻",
-    colors: ["#f6c5a2"],
+    colors: ["#f6c5a2", "#d3d3d3", "#a9a9a9", "#808080", "#696969"],
   },
 }
 
