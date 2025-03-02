@@ -29,11 +29,6 @@ export async function locale(language: AvalaibleLanguage = 'fr', define = true):
   }
 }
 
-/**
- * Ajoute des éléments par défaut pour une langue spécifique
- * @param language La langue cible
- * @param elements Les éléments à ajouter par défaut
- */
 export function addDefaults(language: AvalaibleLanguage, elements: Record<string, Record<'F' | 'M' | 'X', string>>): void {
   if (!DefaultElements[language]) {
     DefaultElements[language] = {};
@@ -59,30 +54,32 @@ export function gender<
   const { capitalize = false, custom = {} as T } = options;
   let { language = L } = options;
   gender = getGenderRole(gender)
+  
   if (!Ls[language]) {
     console.warn(`[GENDER] The language "${language}" has not been loaded.`)
     language = L
   }
-  const result = { ...Ls[language][gender] } as GenderData & { [key: string]: any }
+
+  const result = { ...Ls[language][gender] } as GenderData & { [K in keyof T]: string } & { [K in keyof D]: string }
+  //const result = { ...Ls[language][gender] } as GenderData & { [key: string]: any }
 
   if (DefaultElements[language]) {
     Object.keys(DefaultElements[language]).forEach(key => {
       if (DefaultElements[language][key] && DefaultElements[language][key][gender]) {
-        result[key] = DefaultElements[language][key][gender];
+        (result as Record<string, string>)[key] = DefaultElements[language][key][gender];
       }
     });
   }
-
+  
   Object.keys(custom).forEach(key => {
     if (custom[key] && custom[key][gender]) {
-      result[key] = custom[key][gender];
+      (result as Record<string, string>)[key] = custom[key][gender];
     }
   });
-
   if (capitalize) {
     Object.keys(result).forEach(key => {
-      if (typeof result[key] === 'string') {
-        result[key] = toCapitalize(result[key] as string)
+      if (typeof result[key as keyof typeof result] === 'string') {
+        (result as Record<string, string>)[key] = toCapitalize(result[key as keyof typeof result] as string)
       }
     })
   }
