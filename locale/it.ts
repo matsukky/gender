@@ -4,6 +4,7 @@ import { GenderCollection } from "../types";
 export default {
     F: {
         ...general.F,
+        combined: "lei/ella",
         genderName: "femminile",
         childTerm: "ragazza",
         adultTerm: "donna",
@@ -17,11 +18,12 @@ export default {
         genderAdjective: "femminile",
         pluralSubjectPronoun: "loro",
         pluralPossessiveAdjective: "loro",
-        title: "Signora",
-        shortTitle: "Sig.ra"
+        title: "signora",
+        shortTitle: "sig.ra"
     },
     M: {
         ...general.M,
+        combined: "lui/egli",
         genderName: "maschile",
         childTerm: "ragazzo",
         adultTerm: "uomo",
@@ -35,11 +37,12 @@ export default {
         genderAdjective: "maschile",
         pluralSubjectPronoun: "loro",
         pluralPossessiveAdjective: "loro",
-        title: "Signore",
-        shortTitle: "Sig"
+        title: "signore",
+        shortTitle: "sig"
     },
     X: {
         ...general.X,
+        combined: "loro",
         genderName: "neutro",
         childTerm: "bambino/a",
         adultTerm: "adulto/a",
@@ -53,7 +56,7 @@ export default {
         genderAdjective: "neutro",
         pluralSubjectPronoun: "loro",
         pluralPossessiveAdjective: "loro",
-        title: "Mix",
-        shortTitle: "Mx"
+        title: "mix",
+        shortTitle: "mx"
     }
 } as GenderCollection

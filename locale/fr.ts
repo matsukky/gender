@@ -7,6 +7,7 @@ export default {
         genderName: "féminin",
         childTerm: "fille",
         adultTerm: "femme",
+        combined: "elle",
         subjectPronoun: "elle",
         objectPronoun: "la",
         indirectPronoun: "elle",
@@ -17,14 +18,15 @@ export default {
         genderAdjective: "féminine",
         pluralSubjectPronoun: "elles",
         pluralPossessiveAdjective: "leurs",
-        title: "Madame",
-        shortTitle: "Mme"
+        title: "madame",
+        shortTitle: "mme"
     },
     M: {
         ...general.M,
         genderName: "masculin",
         childTerm: "garçon",
         adultTerm: "homme",
+        combined: "il/lui",
         subjectPronoun: "il",
         objectPronoun: "le",
         indirectPronoun: "lui",
@@ -35,14 +37,15 @@ export default {
         genderAdjective: "masculine",
         pluralSubjectPronoun: "ils",
         pluralPossessiveAdjective: "leurs",
-        title: "Monsieur",
-        shortTitle: "M."
+        title: "monsieur",
+        shortTitle: "m."
     },
     X: {
         ...general.X,
         genderName: "neutre",
         childTerm: "enfant",
         adultTerm: "adulte",
+        combined: "iel",
         subjectPronoun: "iel",
         objectPronoun: "lea",
         indirectPronoun: "ellui",
@@ -53,8 +56,8 @@ export default {
         genderAdjective: "neutre",
         pluralSubjectPronoun: "iels",
         pluralPossessiveAdjective: "leurs",
-        title: "Mx",
-        shortTitle: "Mx"
+        title: "mx",
+        shortTitle: "mx"
         
     }
 } as GenderCollection

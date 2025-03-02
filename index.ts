@@ -1,12 +1,13 @@
 import { AvalaibleGender, AvalaibleLanguage, GenderCollection, GenderData } from './types';
 import { getGenderRole } from './utils';
 
+export * as Types from './types'
+
 import en from './locale/en'
 export let L = <AvalaibleLanguage> 'en' 
 export const Ls = <{ [key: string]: GenderCollection }> {}
 Ls[L] = en
-
-export * as Types from './types'
+export const DefaultElements = <{ [key in AvalaibleLanguage]?: Record<string, Record<'F' | 'M' | 'X', string>> }> {}
 
 function toCapitalize(str: string): string {
   return str.charAt(0).toUpperCase() + str.slice(1).toLowerCase();
@@ -28,7 +29,33 @@ export async function locale(language: AvalaibleLanguage = 'fr', define = true):
   }
 }
 
-export function gender<T extends Record<string, Record<'F' | 'M' | 'X', string>>>(gender: AvalaibleGender, options: { capitalize?: boolean; custom?: T; language?: AvalaibleLanguage } = {}): GenderData & { [K in keyof T]?: string } {
+/**
+ * Ajoute des éléments par défaut pour une langue spécifique
+ * @param language La langue cible
+ * @param elements Les éléments à ajouter par défaut
+ */
+export function addDefaults(language: AvalaibleLanguage, elements: Record<string, Record<'F' | 'M' | 'X', string>>): void {
+  if (!DefaultElements[language]) {
+    DefaultElements[language] = {};
+  }
+  
+  DefaultElements[language] = {
+    ...DefaultElements[language],
+    ...elements
+  };
+}
+
+export function gender<
+  T extends Record<string, Record<'F' | 'M' | 'X', string>>,
+  D extends Record<string, Record<'F' | 'M' | 'X', string>> = typeof DefaultElements[typeof L]
+>(
+  gender: AvalaibleGender,
+  options: {
+    capitalize?: boolean;
+    custom?: T;
+    language?: AvalaibleLanguage 
+  } = {}
+): GenderData & { [K in keyof T]: string } & { [K in keyof D]: string } {
   const { capitalize = false, custom = {} as T } = options;
   let { language = L } = options;
   gender = getGenderRole(gender)
@@ -37,6 +64,14 @@ export function gender<T extends Record<string, Record<'F' | 'M' | 'X', string>>
     language = L
   }
   const result = { ...Ls[language][gender] } as GenderData & { [key: string]: any }
+
+  if (DefaultElements[language]) {
+    Object.keys(DefaultElements[language]).forEach(key => {
+      if (DefaultElements[language][key] && DefaultElements[language][key][gender]) {
+        result[key] = DefaultElements[language][key][gender];
+      }
+    });
+  }
 
   Object.keys(custom).forEach(key => {
     if (custom[key] && custom[key][gender]) {

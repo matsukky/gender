@@ -7,6 +7,7 @@ export default {
         genderName: "feminine",
         childTerm: "girl",
         adultTerm: "woman",
+        combined: "she/her",
         subjectPronoun: "she",
         objectPronoun: "her",
         indirectPronoun: "her",
@@ -17,14 +18,15 @@ export default {
         genderAdjective: "feminine",
         pluralSubjectPronoun: "they",
         pluralPossessiveAdjective: "their",
-        title: "Miss/Mrs",
-        shortTitle: "Ms"
+        title: "miss",
+        shortTitle: "ms"
     },
     M: {
         ...general.M,
         genderName: "masculine",
         childTerm: "boy",
         adultTerm: "man",
+        combined: "he/him",
         subjectPronoun: "he",
         objectPronoun: "him",
         indirectPronoun: "him",
@@ -35,14 +37,15 @@ export default {
         genderAdjective: "masculine",
         pluralSubjectPronoun: "they",
         pluralPossessiveAdjective: "their",
-        title: "Mister",
-        shortTitle: "Mr"
+        title: "mister",
+        shortTitle: "mr"
     },
     X: {
         ...general.X,
         genderName: "neutral",
         childTerm: "child",
         adultTerm: "adult",
+        combined: "they/them",
         subjectPronoun: "they",
         objectPronoun: "them",
         indirectPronoun: "them",
@@ -53,7 +56,7 @@ export default {
         genderAdjective: "neutral",
         pluralSubjectPronoun: "they",
         pluralPossessiveAdjective: "their",
-        title: "Mix",
-        shortTitle: "Mx"
+        title: "mix",
+        shortTitle: "mx"
     }
 } as GenderCollection

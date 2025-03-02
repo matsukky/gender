@@ -17,8 +17,9 @@ export default {
         genderAdjective: "weiblich",
         pluralSubjectPronoun: "sie",
         pluralPossessiveAdjective: "ihre",
-        title: "Frau",
-        shortTitle: "Fr"
+        title: "frau",
+        shortTitle: "fr",
+        combined: "sie/ihr"
     },
     M: {
         ...general.M,
@@ -35,8 +36,9 @@ export default {
         genderAdjective: "männlich",
         pluralSubjectPronoun: "sie",
         pluralPossessiveAdjective: "ihre",
-        title: "Herr",
-        shortTitle: "Hr"
+        title: "herr",
+        shortTitle: "hr",
+        combined: "er/ihm"
     },
     X: {
         ...general.X,
@@ -53,7 +55,8 @@ export default {
         genderAdjective: "neutral",
         pluralSubjectPronoun: "sie",
         pluralPossessiveAdjective: "ihre",
-        title: "Mix",
-        shortTitle: "Mx"
+        title: "mix",
+        shortTitle: "mx",
+        combined: "sie/ihnen"
     }
 } as GenderCollection

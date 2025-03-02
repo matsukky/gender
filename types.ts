@@ -21,9 +21,10 @@ export interface GenderData {
   pluralSubjectPronoun: string
   pluralPossessiveAdjective: string
   title: string
-  shortTitle: string
+  shortTitle?: string
+  combined: string
 }
 
-export type AvalaibleGender = 'F' | '♀' | 'WOMAN' | 'FEMALE' | 'GIRL' | 'M' | 'H' | '♂' | 'MAN' | "MALE" | 'MEN' | 'BOY' | 'X' | 'N' | '⚧' | 'NEUTRAL' | 'HUMAN';
+export type AvalaibleGender = 'F' | '♀' | 'WOMAN' | 'FEMALE' | 'GIRL' | 'SHE' | 'HER' | 'M' | 'H' | '♂' | 'MAN' | "MALE" | 'MEN' | 'BOY' | 'HE' | 'HIM' | 'X' | 'N' | '⚧' | 'NEUTRAL' | 'HUMAN' | 'THEY' | 'THEM';
 
 export type AvalaibleLanguage = 'en' | 'fr' | 'de' | 'es' | 'it' | 'jp' | 'zh' | 'ar' | 'ru'

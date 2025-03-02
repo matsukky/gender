@@ -18,7 +18,8 @@ export default {
         pluralSubjectPronoun: "她们",
         pluralPossessiveAdjective: "她们的",
         title: "女士",
-        shortTitle: "女"
+        shortTitle: "女",
+        combined: "她/她的"
     },
     M: {
         ...general.M,
@@ -36,7 +37,8 @@ export default {
         pluralSubjectPronoun: "他们",
         pluralPossessiveAdjective: "他们的",
         title: "先生",
-        shortTitle: "男"
+        shortTitle: "男",
+        combined: "他/他的"
     },
     X: {
         ...general.X,
@@ -54,6 +56,7 @@ export default {
         pluralSubjectPronoun: "他们",
         pluralPossessiveAdjective: "他们的",
         title: "同志",
-        shortTitle: "X"
+        shortTitle: "X",
+        combined: "它/它的"
     }
 } as GenderCollection

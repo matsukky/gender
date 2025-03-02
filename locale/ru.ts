@@ -17,8 +17,9 @@ export default {
         genderAdjective: "женский",
         pluralSubjectPronoun: "они",
         pluralPossessiveAdjective: "их",
-        title: "Госпожа",
-        shortTitle: "Г-жа"
+        title: "госпожа",
+        shortTitle: "г-жа",
+        combined: "она/её"
     },
     M: {
         ...general.M,
@@ -35,8 +36,9 @@ export default {
         genderAdjective: "мужской",
         pluralSubjectPronoun: "они",
         pluralPossessiveAdjective: "их",
-        title: "Господин",
-        shortTitle: "Г-н"
+        title: "господин",
+        shortTitle: "г-н",
+        combined: "он/его"
     },
     X: {
         ...general.X,
@@ -53,7 +55,8 @@ export default {
         genderAdjective: "нейтральный",
         pluralSubjectPronoun: "они",
         pluralPossessiveAdjective: "их",
-        title: "Микс",
-        shortTitle: "Мкс"
+        title: "микс",
+        shortTitle: "мкс",
+        combined: "они/их"
     }
 } as GenderCollection

@@ -4,6 +4,7 @@ import { GenderCollection } from "../types";
 export default {
     F: {
         ...general.F,
+        combined: "彼女/あなた",
         genderName: "女性",
         childTerm: "女の子",
         adultTerm: "女性",
@@ -18,10 +19,10 @@ export default {
         pluralSubjectPronoun: "彼女たち",
         pluralPossessiveAdjective: "彼女たちの",
         title: "さん",
-        shortTitle: "さん"
     },
     M: {
         ...general.M,
+        combined: "彼/あなた",
         genderName: "男性",
         childTerm: "男の子",
         adultTerm: "男性",
@@ -36,10 +37,10 @@ export default {
         pluralSubjectPronoun: "彼ら",
         pluralPossessiveAdjective: "彼らの",
         title: "さん",
-        shortTitle: "さん"
     },
     X: {
         ...general.X,
+        combined: "あなた",
         genderName: "中性",
         childTerm: "子供",
         adultTerm: "大人",
@@ -54,6 +55,5 @@ export default {
         pluralSubjectPronoun: "それらの人々",
         pluralPossessiveAdjective: "それらの人々の",
         title: "さん",
-        shortTitle: "さん"
     }
 } as GenderCollection

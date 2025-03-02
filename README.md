@@ -165,6 +165,7 @@ locale(language: AvalaibleLanguage, define?: boolean): Promise<GenderCollection>
 | genderName              | Gender name                    | "woman"          |
 | childTerm               | Term for child                 | "girl"           |
 | adultTerm              | Term for adult                 | "woman"          |
+| combined               | Mostly used in social media as pronouns | "she/her"
 | subjectPronoun         | Subject pronoun               | "she"            |
 | objectPronoun          | Object pronoun                | "her"            |
 | indirectPronoun        | Indirect pronoun               | "her"            |
@@ -182,20 +183,6 @@ locale(language: AvalaibleLanguage, define?: boolean): Promise<GenderCollection>
 
 | Role | Values                                    |
 |------|-------------------------------------------|
-| F    | F, ♀, WOMAN, GIRL, FEMALE                |
-| M    | M, H, ♂, MAN, MEN, BOY, MALE             |
-| X    | X, N, ⚧, NEUTRAL, HUMAN                  |
-
-### Supported Languages
-
-| Code | Language |
-|------|----------|
-| en   | English  |
-| fr   | French   |
-| es   | Spanish  |
-| de   | German   |
-| it   | Italian  |
-| jp   | Japanese |
-| zh   | Chinese  |
-| ar   | Arabic   |
-| ru   | Russian  |
+| F    | F, ♀, WOMAN, GIRL, FEMALE, SHE, HER       |
+| M    | M, H, ♂, MAN, MEN, BOY, MALE, HE, HIM     |
+| X    | X, N, ⚧, NEUTRAL, HUMAN, THEY, THEM      |

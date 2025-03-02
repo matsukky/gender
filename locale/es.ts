@@ -17,8 +17,9 @@ export default {
         genderAdjective: "femenina",
         pluralSubjectPronoun: "ellas",
         pluralPossessiveAdjective: "sus",
-        title: "Señora",
-        shortTitle: "Sra"
+        title: "señora",
+        shortTitle: "sra",
+        combined: "ella"
     },
     M: {
         ...general.M,
@@ -35,8 +36,9 @@ export default {
         genderAdjective: "masculina",
         pluralSubjectPronoun: "ellos",
         pluralPossessiveAdjective: "sus",
-        title: "Señor",
-        shortTitle: "Sr"
+        title: "señor",
+        shortTitle: "sr",
+        combined: "él"
     },
     X: {
         ...general.X,
@@ -53,7 +55,8 @@ export default {
         genderAdjective: "neutro",
         pluralSubjectPronoun: "elles",
         pluralPossessiveAdjective: "sus",
-        title: "Mix",
-        shortTitle: "Mx"
+        title: "mix",
+        shortTitle: "mx",
+        combined: "elle"
     }
 } as GenderCollection

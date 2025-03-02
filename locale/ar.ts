@@ -4,6 +4,7 @@ import { GenderCollection } from "../types";
 export default {
     F: {
         ...general.F,
+        combined: "هي/ها",
         genderName: "مؤنث",
         childTerm: "فتاة",
         adultTerm: "امرأة",
@@ -22,6 +23,7 @@ export default {
     },
     M: {
         ...general.M,
+        combined: "هو/ه",
         genderName: "مذكر",
         childTerm: "صبي",
         adultTerm: "رجل",
@@ -40,6 +42,7 @@ export default {
     },
     X: {
         ...general.X,
+        combined: "هم/هن",
         genderName: "محايد",
         childTerm: "طفل",
         adultTerm: "بالغ",
